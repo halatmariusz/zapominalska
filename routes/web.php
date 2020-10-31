@@ -15,5 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/waluty', 'CurrencyController@show')->name('currencies.show');
+
+
 Route::get('/webhook', 'MainController@receive')->middleware('verify');
 Route::post('/webhook', 'MainController@receive');
